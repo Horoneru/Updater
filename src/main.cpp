@@ -4,7 +4,7 @@
 #include <QTranslator>
 #include <QLocale>
 
-/*                              Horoneru updater V1.0
+/*                              Horoneru updater V1.0.1
  *    A very basic and lightweight updater used to update an application's executable
  *
 */
@@ -16,7 +16,9 @@ int main(int argc, char *argv[])
     QSharedMemory sharedMemory;
     sharedMemory.setKey("Horoneru-updater");
 
-    if (!sharedMemory.create(1) || argc == 1) //If it's already in memory or if it has been called by the user and not the program to update
+    //If it's already in memory or
+    //if it has been called by the user
+    if (!sharedMemory.create(1) || argc == 1)
     {
         exit(0); // Exit process immediately
     }
