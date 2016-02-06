@@ -24,7 +24,8 @@ class Updater : public QObject
 
 public:
     enum OS { Windows, Linux, Mac };
-    Updater(QString appName, QString currentVersion, QString urlLatestVersion, QString urlLatestExe, QString showIfNoUpdate, QObject * parent = 0);
+    Updater(QString appName, QString currentVersion, QString urlLatestVersion,
+            QString urlLatestExe, QString showIfNoUpdate, QObject * parent = 0);
     ~Updater();
     void start();
 
@@ -42,25 +43,25 @@ private:
     void noNetworkError();
 
     //Attributes
-    QTimer a_progressTimer;
-    QProgressDialog *a_checkUpdateProgressDialog;
-    QProgressDialog *a_progressDialog;
-    QNetworkAccessManager *a_netManager;
-    QNetworkRequest a_netRequest;
-    QNetworkReply *a_netReply;
+    QTimer m_progressTimer;
+    QProgressDialog *m_checkUpdateProgressDialog;
+    QProgressDialog *m_progressDialog;
+    QNetworkAccessManager *m_netManager;
+    QNetworkRequest m_netRequest;
+    QNetworkReply *m_netReply;
     //The two urls for the updater to update itself when needed
-    QString a_urlUpdaterVersion;
-    QString a_urlUpdaterExe;
+    QString m_urlUpdaterVersion;
+    QString m_urlUpdaterExe;
     //The actual infos from the application we're trying to update
-    QString a_urlVersion;
-    QString a_urlExe;
-    QString a_appName;
-    QString a_currentAppVersion;
-    QString a_newAppVersion;
-    bool a_newUpdaterVersion;
-    bool a_showIfNoUpdate;
-    QString a_currentUpdaterVersion;
+    QString m_urlVersion;
+    QString m_urlExe;
+    QString m_appName;
+    QString m_currentAppVersion;
+    QString m_newAppVersion;
+    bool m_newUpdaterVersion;
+    bool m_showIfNoUpdate;
+    QString m_currentUpdaterVersion;
 
-    int a_idOs;
+    int m_idOs;
 };
 #endif // UPDATER_H
