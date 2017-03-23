@@ -4,11 +4,11 @@ It can be used if your application isn't complex and only updates its executable
 
 **Warning : This project is pretty much unmaintained. You can use it as a basis to understand how to do a simple updater, but it will most likely stay as is.**
 
-##Downloads
+## Downloads
 
-The updater will refuse to execute if it's called standalone without any arguments. So to use it for your projects you must of course compile it and adapt it to your project.
+The updater will refuse to execute if it's called standalone without any arguments. So to use it for your projects you must compile it and adapt it to your project.
 
-##Features
+## Features
 
  - Already translated in <b>French</b> and <b>English</b>
  - Won't start if the users tried to execute it standalone
